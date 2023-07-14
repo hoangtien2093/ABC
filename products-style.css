@@ -1,0 +1,166 @@
+/*-----CATEGORIES-----*/
+.categoryBtn {
+  margin: 8px;
+  float: left;
+  list-style-type: none;
+  width: 110px;
+}
+.categoryBtn p {
+  font-size: 12pt;
+}
+.categoryBtn button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.categoryBtn button:hover {
+  opacity: 0.8;
+  .categoryImg {
+    width: 90px;
+    border: 4px dotted rebeccapurple;
+  }
+}
+
+.categoryImg {
+  width: 100px;
+  max-height: 100px;
+  border: 4px dotted red;
+  border-radius: 50%;
+}
+
+
+/*PRODUCTS CARD */
+.card {
+  background-color: white;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+  max-width: 320px;
+  padding-top: 5px;
+  height: 400px;
+  margin: 15px 30px;
+  text-align: center;
+  font-family: arial;
+}
+
+  .itemName {
+    font-size: 15pt;
+    margin-bottom: 0px;
+
+  }
+  
+  .itemPrice {
+    color: grey;
+    font-size: 14pt;
+  }
+
+  .cardButton {
+    width: 320px;
+    position: absolute;
+    bottom: 20px;
+  }
+  
+  .card button {
+    margin-left: 3%;
+    margin-right: 3%;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 35%;
+    font-size: 16px;
+    /* float: left; */
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+/* SHOPPING CART  */
+
+  .cartBtn {
+    color: black;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 58px;
+    right: 45px;
+    font-size: 35pt;
+    border-style: none;
+    padding: 0px;
+    width: 50px;
+    background: none;
+  }
+  .cartBtn:hover {
+    color: rebeccapurple;
+  }
+  .cartBtn .badge {
+    font-size: 13pt;
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 50%;
+  }
+  .modal-header {
+    background-color:#f5ebed ;
+  }
+
+  .modal-title {
+    text-align: center;
+  }
+
+  .backBtn {
+    float: left;
+    border-style: none;
+    background: none;
+    font-size: 17pt;
+  }
+  .cnfrm, .orderBtn{
+    font-size: 17pt; 
+    font-weight: bold; color: white;
+    background-color: #bb515b;
+    border-style: none ;border-radius: 7px;
+  }
+  .orderBtn {
+    position: fixed; bottom: 15px; left: 400px;
+  }
+   .cnfrm:hover, .orderBtn:hover{
+    opacity: 0.8;
+  }
+
+  #cartlist td {
+    vertical-align: middle;
+  }
+  #cartlist button {
+    background: none;
+    border-style: none;
+  }
+  
+  
+  
+
+  /* Pagination */
+.pagination-list{
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 20px;
+  color: #c0353c;
+}
+.pagination-list button {
+  border-style: none;
+  background:none;
+}
+
+.selectedPage {
+  color: black;
+}
+
+/* ALERT*/
+#addedAlert {
+  position: fixed; 
+  top: 30px; 
+  left: 30%;
+}

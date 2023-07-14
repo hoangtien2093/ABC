@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    FRAMEWORKS   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <!-- font anyone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    SOURCE   -->
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="products-style.css">
+    <script src="index-controller.js"></script>
+
+    <title>Index</title>   
+    <style>
+
+    </style>
+    
+</head>
+<body class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
+    <header class="navbar">
+
+        <div class="LS">
+            <!-- ----------------------------------logo ------------------------ -->
+            <div>
+                <a href="#" id="logo">SIMPLON</a>
+            </div>
+  
+            <!-- ----------------------------------search show------------------------ -->
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-sharp fa-solid fa-xmark"></i></a>
+                    <div class="box"><h3 style="text-align: center;">SEARCH</h3>
+                        <div class="container-4">
+                            <form action="#!products" ng-submit="getKeyword()" onsubmit="closeNav()">
+                                <input type="text" id="txtSearch" ng-model="txtSearch" 
+                                        placeholder="Search...">
+                                <button type="submit" class="icon"><i class="fa fa-search"></i></button>
+                            </form>
+                            
+                        </div>
+                    </div>
+             </div>
+
+        </div>
+
+    <!-- --------------------------------------------------------------------------- -->  
+    <!-- thanh menu-->
+    <ul id="menu" style=" background-color: rgba(255, 255, 255, 0.4);;">
+        <li id="hm"><a href="#/!"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#!gallery">Gallery</a></li>
+        <li><a href="#!products" ng-click="getCat('ALL PRODUCTS');setClickedPage(0)">Products <i class="fa fa-caret-down"></i></a>
+            <table class="sub-menu" id="bang">
+                <tr>
+                    <td><a href="#!products" ng-click="getCat('HAIR')">Hair</a></td>
+                    <td><a href="#!products" ng-click="getCat('MAKE-UP KITS')">Make-up Kits</a></td>
+                </tr>
+                <tr>        
+                    <td><a href="#!products" ng-click="getCat('SKIN')"> Skin</a></td>                                         
+                    <td><a href="#!products" ng-click="getCat('WEDDING KITS')">Wedding Kits</a></td>          
+                </tr>
+                <tr>            
+                    <td><a href="#!products" ng-click="getCat('NAIL ARTS')">Nail Arts</a></td>                  
+                    <td><a href="#!products" ng-click="getCat('JEWELRY')">Jewelry</a></td>                                                       
+                </tr>      
+                <tr>                            
+                    <td><a href="#!products" ng-click="getCat('NAIL PAINTS')">Nail Paints</a></td> 
+                    <td><a href="#!products" ng-click="getCat('UPCOMING')">Upcoming Products</a></td>
+                </tr>
+            </table> 
+        </li>               
+        <li><a href="#!aboutus">About Us</a></li>
+        <li><a href="#!contactus">Contact Us</a></li>
+        <li style="float: right; text-align: left;">
+            <!-- ----------------------------------search bt------------------------ -->
+            <button class="openbtn" onclick="openNav()">
+                <i class="fa fa-search" style="font-size: 25px;"></i>
+            </button>   
+        </li>
+    </ul> 
+    
+    </header>
+
+    <section> 
+        <div ng-view autoscroll="true"></div> 
+    </section>
+    <!-- Scroll To Top Button -->
+    <div>
+        <button class="scrollToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <span class="glyphicon glyphicon-arrow-up" style="font-size: 20pt;"></span>
+        </button>
+    </div>
+
+    <footer>
+        <div class="cuis">
+            <div class="cui_1">
+               <div class="cui_1_1">
+                    <p><b>SIGN UP FOR</b></p>
+                    <p>Would you like to receive a special promotion? <br>Register now.</p>
+                    
+
+               </div>
+               <div class="cui_1_2">
+                    <p><b>CUSTOMER SUPPORT</b></p>
+                    <p>Terms of Service</p>
+                    <p>Shop system</p>
+                    <p>Frequently asked questions</p>
+                    <p>Contact</p>
+                    <p>Check your order</p>
+               </div>
+               <div class="cui_1_3">
+                    <p><b>POLICY ONLY</b></p>
+                    <p>Product warranty </p>
+                    <p>Sales policy </p>
+                    <p>Delivery policy</p>
+                    <p>Return Policy</p>
+               </div>
+            </div>
+            <div class="cui_2">
+                <div>
+                    <p>
+                        <b style="font-size: 30px; font-family: Optima;"> About us</b>                       
+                    </p>
+                    <a href="#">SIMPLON</a>
+                    
+                </div>
+                <div>
+                    <p> 
+                        adress: xxx/123/xxx <br>
+                        phone: 0123xxxx<br>
+                        email: xxx@123gmail.com
+                    </p>
+                </div>
+                <div>
+                    <p>copyright belongs to the company xxx| provide xxx</p>
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+        <span align="left" style="  font-weight: bold; 
+                                    margin-bottom:0px;
+                                    margin-left: 15px;">
+            &copy; Copyright FPT Aptech
+        </span>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+    
+
